@@ -10,7 +10,15 @@ class Pessoa:
     def cumprimentar(self):
         return f'Olá Sr. {id(self)}'
 
+    @staticmethod  # decorator
+    def metodo_estatico():
+        return 42
 
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
+
+######################
 if __name__ == '__main__':
     gustavo = Pessoa(nome='Gustavo')
     luciano = Pessoa(gustavo, nome='Luciano')
@@ -28,3 +36,29 @@ if __name__ == '__main__':
     print(Pessoa.olhos)
     print(gustavo.olhos)
     print(luciano.olhos)
+    print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), luciano.nome_e_atributos_de_classe())
+
+class Carro:
+    def __init__(self, motor, direcao):
+
+
+class Motor:
+    def __init__(self, velocidade):
+        self.velocidade = velocidade
+    def acelerar(self):
+        return velocidade += 1
+    def frear(self):
+        if velocidade <= 1:
+            return 0
+        else:
+            return velocidade -= 2
+
+
+class Direcao:
+    def __init__(self, direcao):
+        self.direcao = ['Norte', 'Leste', 'Sul', 'Oeste']
+    def girar_a_direita:
+        pass
+    def girar_a_esquerda:
+        pass
